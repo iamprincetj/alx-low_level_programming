@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-/** main- prints the sentence "Programming is like building a multilingual puzzle"
+/**
+ * main- prints the phrase "Programming is like building a multilingual puzzle"
  * not allowed to use printf must use puts
- * return value 0
+ * return: 0 if exited properly, non-zero otherwise
  */
-int main () 
+int main(void)
 {
 	puts("\"programming is like building a multilingual puzzle");
 	return (0);
