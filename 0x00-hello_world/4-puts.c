@@ -3,10 +3,10 @@
 /**
  * main- prints the phrase "Programming is like building a multilingual puzzle"
  * not allowed to use printf must use puts
- * return: 0 if exited properly, non-zero otherwise
+ * Return: should have the value 0
  */
 int main(void)
 {
-	puts("\"programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
