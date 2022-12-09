@@ -9,9 +9,9 @@
 
 int main(void)
 {
-	char a;
-	char b = ',';
-	char c = ' ';
+	int a;
+	int b = ',';
+	int c = ' ';
 
 	for (a = 48; a < 58; a++)
 	{
