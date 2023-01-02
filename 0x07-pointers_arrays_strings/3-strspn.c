@@ -4,7 +4,6 @@
  *_strspn - gets the length of a prefix substring
  *
  *@s: pointer to the string input
-
  *@accept: substring prefix to look for.
  *Return: the number of bytes in the intial segment of s
  */
