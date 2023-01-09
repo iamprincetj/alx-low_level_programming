@@ -14,12 +14,15 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	unsigned int a, b, L, L1;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+
 	for (L = 0; s1[L]; L++)
 		;
 	for (L1 = 0; s2[L1]; L1++)
 		;
 
-	ptr = (char *) malloc((L + L1) * sizeof(char));
+	ptr = (char *) malloc((L + L1 + 1) * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
