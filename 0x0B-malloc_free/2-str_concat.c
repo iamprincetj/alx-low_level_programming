@@ -15,9 +15,9 @@ char *str_concat(char *s1, char *s2)
 	unsigned int a, b, L, L1;
 
 
-	for (L = 0; s1[L]; L++)
+	for (L = 0; s1 && s1[L]; L++)
 		;
-	for (L1 = 0; s2[L1]; L1++)
+	for (L1 = 0; s2 && s2[L1]; L1++)
 		;
 
 	ptr = (char *) malloc((L + L1 + 1) * sizeof(char));
@@ -25,22 +25,18 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 
-	if (s1)
+
+	for (a = 0; s1[a]; a++)
 	{
-		for (a = 0; s1[a]; a++)
-		{
-			ptr[a] = s1[a];
-		}
+		ptr[a] = s1[a];
 	}
-	
-	if (s2)
+
+	for (b = 0; s2[b]; b++)
 	{
-		for (b = 0; s2[b]; b++)
-		{
-			ptr[a] = s2[b];
-			a++;
-		}
+		ptr[a] = s2[b];
+		a++;
 	}
+
 	ptr[a] = '\0';
 
 	return (ptr);
