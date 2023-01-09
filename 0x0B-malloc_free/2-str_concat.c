@@ -14,10 +14,6 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	unsigned int a, b, L, L1;
 
-	if (s1 == NULL)
-		return (0);
-	if (s2 == NULL)
-		return (0);
 
 	for (L = 0; s1[L]; L++)
 		;
@@ -29,12 +25,12 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (a = 0; s1[a]; a++)
+	for (a = 0; a < L; a++)
 	{
 		ptr[a] = s1[a];
 	}
 
-	for (b = 0; s2[b]; b++)
+	for (b = 0; b < (L + L1); b++)
 	{
 		ptr[a] = s2[b];
 		a++;
