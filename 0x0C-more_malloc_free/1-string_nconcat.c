@@ -24,6 +24,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (b = 0; s2[b]; b++)
 		;
+	if (n >= b)
+		n = b;
 
 	sum = a + b;
 
@@ -35,12 +37,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i]; i++)
 		ptr[i] = s1[i];
 
-	for (j = 0; s2[j]; j++)
+	for (j = 0; j < n && s2[j]; j++)
 	{
-		if (n >= b)
-			ptr[i] = s2[j];
-		if (j < n)
-			ptr[i] = s2[j];
+		ptr[i] = s2[j];
 		i++;
 	}
 	ptr[i] = '\0';
