@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= b)
 		n = b;
 
-	sum = a + b;
+	sum = a + n;
 
 	ptr =(char *) malloc(sizeof(char) * sum + 1);
 
