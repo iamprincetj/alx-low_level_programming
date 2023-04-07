@@ -23,12 +23,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	value_dup = strdup(value);
 
 	if (value_dup == NULL)
-	{
 		return (0);
-	}
-
 	idx = key_index((const unsigned char *)key, ht->size);
-
 	for (itr = idx; ht->array[itr]; itr++)
 	{
 		if (strcmp(ht->array[itr]->key, key) == 0)
@@ -38,7 +34,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-
 	head = malloc(sizeof(hash_node_t));
 	if (head == NULL)
 	{
